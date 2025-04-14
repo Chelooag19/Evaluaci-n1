@@ -1,0 +1,45 @@
+### mostrar recordatorios
+GET http://127.0.0.1:5000/api/reminders
+Content-Type: application/json
+
+
+### Crear recordatorio
+POST http://127.0.0.1:5000/api/reminders
+Content-Type: application/json
+
+{
+  "content": "Ir a clases 15/04",
+  "important": true
+}
+
+
+### crear recordatorio con important False
+POST http://127.0.0.1:5000/api/reminders
+Content-Type: application/json
+
+{
+  "content": "Clases de programacion OO II"
+}
+
+
+### editar recordatorio
+PATCH http://127.0.0.1:5000/api/reminders/
+Content-Type: application/json
+
+{
+  "content": "Estudiar Flask para Ev1",
+  "important": false
+}
+
+
+### editar solo important
+PATCH http://127.0.0.1:5000/api/reminders/
+Content-Type: application/json
+
+{
+  "important": true
+}
+
+
+### eliminar recordatorio
+DELETE http://127.0.0.1:5000/api/reminders/
